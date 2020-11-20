@@ -1,0 +1,11 @@
+# path : /test1/test2/test3.log
+# this logic to extract filename in given path
+
+def path = doc['path'].value;
+if (path != null) {
+    int lastSlashIndex = path.IndexOf('/');
+    if (lastSlashIndex > 0) {
+    return path.substring(lastSlashIndex+1);
+    }
+}
+return "Null";
