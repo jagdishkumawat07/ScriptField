@@ -1,0 +1,6 @@
+  # path : /test1/test2/test3.log  
+  #this logic will extract test1 from path 
+  def str = doc['path'].value;
+  int n = str.indexOf("/",1);
+  def res = str.substring(1, n);
+  return res;
